@@ -1,0 +1,33 @@
+.TH VALIDATECONF 1 "" "VALIDATECONF"
+
+.SH NAME
+.BR validateconf
+\- This utility can be used to validate the tsocks.conf configuration file.
+.SH SYNOPSIS
+.B validateconf
+[-f config file] [-t  hostnameip[:port\]]
+.SH DESCRIPTION
+.B validateconf
+can be used to verify the  configuration  file.  It
+checks  the format of the file and also the contents for errors.
+Having read the file it dumps the configuration to the screen in
+a  formatted,  readable  manner. This can be extremely useful in
+debugging problems.
+
+validateconf can read a configuration file from a location other
+than  the  location  specified  at  compile  time  with  the  -f
+<filename> command line option.
+
+Normally validateconf simply dumps the configuration read to the
+screen  (in  a  nicely  readable  format), however it also has a
+useful 'test' mode. When passed a  hostname/ip  on  the  command
+line like -t <hostname/ip>, validateconf determines which of the
+SOCKS servers specified in the configuration file would be  used
+by tsocks to access the specified host.
+.PP
+.SH SEE ALSO
+tsocks.conf(5)
+tsocks(8)
+.SH AUTHOR
+This manpage was created by gustavo panizzo <gfa@zumbi.com.ar> for the Debian
+package of tsocks. It may be used by others.
