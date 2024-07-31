@@ -1,0 +1,5 @@
+# Upstream doesn't use ~ to separate between betas and release, previous versions of the package didn't do it either
+# 1.8beta5+ds1-1 lt 1.8+ds1 and 1.8beta5+ds1-1 lt 1.8beta6+ds1 both works
+tsocks: rc-version-greater-than-expected-version
+
+tsocks source: configure-generated-file-in-source [config.status]

@@ -1,0 +1,11 @@
+00_patch_from_1.8beta5-9.2.patch
+01_symbolexport.patch
+02_hyphenfix.patch
+03_fixloop.patch
+04_getpeername.patch
+05_config_in_home.patch
+06_fallback.patch
+07_tsocks-1.8_beta5-hostname-config-fix.patch
+08_manpages-fixes.patch
+09_multiarch_paths.patch
+10_hardening.patch

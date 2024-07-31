@@ -1,0 +1,3 @@
+version=3
+opts=uversionmangle=s/(\d)\-?(RC\d*)$/$1~$2/ \
+http://sf.net/tsocks/tsocks-(\d\S*)\.tar.gz

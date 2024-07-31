@@ -1,0 +1,11 @@
+# provide statically linked binary to let save the environment if
+# the ld.preload is broken:
+tsocks: statically-linked-binary [usr/bin/saveme]
+# Package is an small library so makes sense to override this warning, gustavo panizzo 2016-11-07
+tsocks: link-to-shared-library-in-wrong-package usr/lib/x86_64-linux-gnu/libtsocks.so.1.8 [usr/lib/x86_64-linux-gnu/libtsocks.so]
+# Package is a library but it is used with LD_PRELOAD, package is not used to link against; gustavo panizzo 2016-11-07
+tsocks: package-name-doesnt-match-sonames libtsocks1
+tsocks: no-symbols-control-file usr/lib/x86_64-linux-gnu/libtsocks.so.1.8
+# Upstream doesn't use ~ to separate between betas and release, previous versions of the package didn't do it either
+# 1.8beta5+ds1-1 lt 1.8+ds1 and 1.8beta5+ds1-1 lt 1.8beta6+ds1 both works
+tsocks: rc-version-greater-than-expected-version
